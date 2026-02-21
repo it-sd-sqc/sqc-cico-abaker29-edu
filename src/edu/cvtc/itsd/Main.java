@@ -42,6 +42,8 @@ public class Main {
         throws BadLocationException
     {
       if (fb.getDocument() != null) {
+        // Handles copy+pasted input properly
+        stringToAdd = stringToAdd.replaceAll("\\D+", "");
         super.insertString(fb, offset, stringToAdd, attr);
       }
       else {
@@ -54,6 +56,8 @@ public class Main {
         throws BadLocationException
     {
       if (fb.getDocument() != null) {
+        // Handles copy+pasted input properly
+        stringToAdd = stringToAdd.replaceAll("\\D+", "");
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
       }
       else {
