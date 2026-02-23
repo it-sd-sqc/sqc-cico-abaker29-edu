@@ -61,4 +61,35 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+Module 4: Constrain developer card input length (Ticket 402)
+
+Test steps:
+
+- Build and run CiCo.
+- Attempt to type fewer than the required number of digits into the
+  developer card field (e.g., type 123)
+
+- Attempt to type more than the required number of
+  digits into the developer card field (e.g., paste or type 123456789)
+
+- Attempt to type non‑digit characters (letters, symbols, spaces)
+- Enter exactly the required number of digits (e.g., 00000000)
+  and click Update
+
+Expected results
+- In step 2, the field should allow typing only up
+  to the required number of digits; no error should
+  occur, but the field should not auto‑pad or accept
+  incomplete input as valid.
+
+- In step 3, the field should reject any additional
+  digits beyond the required length; the extra characters
+  should not appear in the field.
+
+- In step 4, the field should reject all non‑digit
+  characters; they should not appear in the field.
+
+- In step 5, the input should be accepted normally
+  and the system should proceed exactly as it does for
+  a valid card number in other tests.
 
