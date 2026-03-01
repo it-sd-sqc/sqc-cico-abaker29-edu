@@ -69,3 +69,12 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ## Expected results
 The card field should display 1234, ignoring non-numerical input.
+
+# Module 5: Exit application when window closed.
+
+## Test steps
+1. Build and run CiCo.
+2. Close the application window.
+
+## Expected results
+The application should terminate.
