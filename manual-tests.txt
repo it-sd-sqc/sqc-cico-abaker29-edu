@@ -76,3 +76,18 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * After step 4, the field should display 1234.
 * After step 5, the field should display 9988.
 
+# Module 5: Ticket 501 - Next Customer Button
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Click "Next Customer" button immediately.
+4. Enter 00000000 into the field and click Update.
+5. Do not click the "Next Customer" button and wait 11 seconds.
+
+## Expected results
+* The status panel should appear after step 2.
+* The main panel should appear immediately after step 3.
+* The status panel should appear after step 4.
+* The main panel should appear automatically after step 5.
+
