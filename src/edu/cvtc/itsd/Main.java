@@ -51,6 +51,10 @@ public class Main {
       } else {
         Toolkit.getDefaultToolkit().beep();
       }
+
+      if (fb.getDocument().getLength() == 8) {
+        Main.processCard();
+      }
     }
 
     @Override
@@ -69,14 +73,10 @@ public class Main {
       } else {
         Toolkit.getDefaultToolkit().beep();
       }
-    }
-  }
 
-
-  // Lookup the card information after button press ///////////////////////////
-  public static class Update implements ActionListener {
-    public void actionPerformed(ActionEvent evt) {
-      Main.processCard();
+      if (fb.getDocument().getLength() == 8) {
+        Main.processCard();
+      }
     }
   }
 
@@ -271,12 +271,6 @@ public class Main {
     fieldNumber.setBackground(Color.green);
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
-
-    JButton updateButton = new JButton("Update");
-    updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    updateButton.addActionListener(new Update());
-    updateButton.setForeground(Color.green);
-    panelMain.add(updateButton);
 
     panelMain.add(Box.createVerticalGlue());
 
